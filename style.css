@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav {
+  background-color: navy;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav img {
+  height: 100%;
+  color: white;
+}
+
+nav div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav > img {
+  height: 200%;
+}
+
+nav > .menu a {
+  padding: 0 8px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav > div > img {
+  height: 70%;
+}
+
+.judul {
+  background-color: chocolate;
+  text-align: center;
+  color: white;
+}
