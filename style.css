@@ -1,48 +1,532 @@
-body {
+* {
   margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.2s;
+}
+
+:root {
+  --color-green: #00aa00;
+  --color-orange: #ef861d;
+  --color-abuabu: #626262;
+  --color-bg: #f9f9f9;
+  --color-white: #ffffff;
+  --color-hovergreen: rgb(39, 181, 39);
+}
+
+body {
+  position: absolute;
+  min-height: 100vh;
+  background: white;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
 }
 
 nav {
-  background-color: navy;
-  height: 50px;
+  position: fixed;
+  width: 100%;
+  height: 150px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
+header {
+  width: 100%;
+  height: 10px;
+  background-color: #00aa00;
+  display: flex;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+  padding: 21px 15.4%;
 }
 
-nav img {
-  height: 100%;
-  color: white;
-}
-
-nav div {
-  height: 100%;
+header a {
   display: flex;
   align-items: center;
 }
 
-nav > img {
-  height: 200%;
-}
-
-nav > .menu a {
-  padding: 0 8px;
-  height: 100%;
+header a span {
+  font-family: Roboto;
   display: flex;
-  align-items: center;
-}
-
-nav > div > img {
-  height: 70%;
-}
-
-.judul {
-  background-color: chocolate;
+  font-size: 13px;
+  padding: 13px;
   text-align: center;
   color: white;
+  font-weight: 500;
+}
+
+.Navbar {
+  display: flex;
+}
+
+.Navbar li {
+  font-weight: 500;
+  color: var(--color-white);
+  padding: 5px 0;
+  margin: 0px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.Navbar li i {
+  margin: 0px 5px;
+}
+
+.Container_Navbar ul {
+  background: white;
+  width: 100%;
+  height: 106px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Container_Navbar .Navbar2 {
+  display: flex;
+  align-items: center;
+  padding: 0px 15%;
+}
+
+.Container_Navbar .Navbar2 .Search {
+  border: 3px var(--color-green) solid;
+  width: 1000px;
+  height: 52px;
+  border-radius: 10px;
+}
+
+.Container_Navbar .Navbar2 .Search .input {
+  outline: none;
+  height: 46px;
+  width: 800px;
+  border-radius: 10px;
+  border: 0;
+  margin-left: 20px;
+  font-size: 17px;
+}
+
+.Container_Navbar .Search .ButtonSearch {
+  position: absolute;
+  align-items: center;
+  outline: none;
+  border: 0;
+  background: var(--color-green);
+  padding-left: 10px;
+  width: 70px;
+  height: 38px;
+  border-radius: 4px;
+  margin-left: 98px;
+  z-index: 100;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.Container_Navbar .Navbar2 .Search .ButtonSearch:hover {
+  background: rgb(39, 181, 39);
+  transition: 0.3s;
+}
+
+.Container_Navbar .Navbar2 .Search .ButtonSearch i {
+  text-align: center;
+  font-size: 25px;
+  margin-left: -6px;
+  color: var(--color-white);
+  font-weight: 100;
+}
+
+.Container_Navbar .Navbar2 .Icon ul {
+  display: flex;
+}
+
+.Container_Navbar .Navbar2 .Icon li {
+  font-size: 35px;
+  color: var(--color-green);
+  cursor: pointer;
+}
+
+.Container_Navbar .Navbar2 .Icon li i {
+  margin: 0px 7px;
+}
+
+.Container_Navbar .Navbar2 .Icon li i:hover {
+  color: var(--color-hovergreen);
+}
+
+.Acces {
+  display: flex;
+  align-items: center;
+  color: var(--color-green);
+  justify-content: center;
+  background: transparent;
+  margin-top: 150px;
+  width: 100%;
+  height: 45px;
+}
+
+.Acces a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--color-green);
+  font-style: italic;
+  margin: 0px 10px;
+}
+
+.Acces a:hover {
+  color: var(--color-hovergreen);
+}
+
+.Image_Top {
+  display: block;
+  text-align: center;
+}
+
+.Content_InfoToko {
+  width: 100%;
+  height: 70px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: -1;
+}
+
+.Content_InfoToko ul {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.Content_InfoToko ul li {
+  display: flex;
+  align-items: center;
+  margin: 0px 40px;
+}
+
+.Content_InfoToko ul .Info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.Content_InfoToko ul li i {
+  font-size: 30px;
+}
+
+.Content_InfoToko ul a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+.Content_InfoToko ul a h4 {
+  font-weight: bold;
+  text-align: left;
+  font-size: 15px;
+}
+
+.Content_InfoToko ul a p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.Info_Promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Info_Promo .Promo {
+  border-radius: 3px;
+  width: 440px;
+  height: 120px;
+  background: var(--color-green);
+  margin: 0px 7px;
+}
+
+.Info_Promo .Promo:hover {
+  background: var(--color-hovergreen);
+}
+
+.Kategori {
+  width: 100%;
+  height: 100px;
+  margin-top: 35px;
+}
+
+.Kategori h3 {
+  margin-left: 280px;
+}
+
+.Kategori .Row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 95px;
+  margin-top: 15px;
+  background: white;
+}
+
+.Kategori .Coloum {
+  width: 50px;
+  height: 50px;
+  background: var(--color-green);
+  border-radius: 50%;
+  margin: 0px 47px;
+}
+
+.Kategori .Coloum:hover {
+  background: var(--color-hovergreen);
+}
+
+.Flashsale {
+  width: 100%;
+  margin-top: 170px;
+  margin-left: 300px;
+}
+
+.Flashsale .top {
+  display: flex;
+  align-items: center;
+}
+
+.Flashsale .top ul {
+  display: flex;
+  align-items: center;
+  margin: 0px 10px;
+}
+
+.Flashsale .top ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
+  width: 30px;
+  height: 20px;
+  background: black;
+  border-radius: 2px;
+  margin: 0px 3px;
+  color: white;
+}
+
+.Flashsale .Content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Flashsale .Content ul {
+  display: flex;
+  justify-content: center;
+}
+
+.Flashsale .Content ul li {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 18px;
+}
+
+.Flashsale .Content ul li .Box_Top {
+  margin-top: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 3px;
+  background: var(--color-green);
+}
+
+.Flashsale .Content ul li .Box_Top:hover {
+  background-color: var(--color-hovergreen);
+}
+
+.Flashsale .Content ul li .Box_Top .Diskon {
+  width: 35px;
+  height: 35px;
+  float: right;
+  border-radius: 50px;
+  background: #ef861d;
+}
+
+.Flashsale .Content ul li h4 {
+  text-align: center;
+  padding: 5px 0px;
+}
+
+.Flashsale .Content ul li .Box_Down {
+  width: 150px;
+  height: 20px;
+  border-radius: 50px;
+  background: var(--color-green);
+}
+
+.Rekomendasi {
+  margin-top: 60px;
+  /* display: flex ;
+  align-items: center;
+  justify-content: center; */
+}
+
+.Rekomendasi .Garis {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 1370px;
+  height: 4px;
+  background: var(--color-green);
+}
+
+.Rekomendasi .Content {
+}
+
+.Rekomendasi .Content ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Rekomendasi .Content ul li {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 18px;
+}
+
+.Rekomendasi .Content ul li .Box_Top {
+  margin-top: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 3px;
+  background: var(--color-green);
+}
+
+.Rekomendasi .Content ul li .Box_Top:hover {
+  background-color: var(--color-hovergreen);
+}
+
+.Rekomendasi .Content ul li .Box_Top .Diskon {
+  width: 35px;
+  height: 35px;
+  float: right;
+  border-radius: 50px;
+  background: #ef861d;
+}
+
+.Rekomendasi .Content ul li h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.Rekomendasi .Content ul li span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Rekomendasi .Content ul li span h5 {
+  color: var(--color-green);
+  font-size: 15px;
+}
+
+.Rekomendasi .Content ul li span p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.Lihat_Lainnya {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.Lihat_Lainnya button {
+  background: var(--color-green);
+  border: none;
+  padding: 10px 50px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.Lihat_Lainnya button:hover {
+  background: var(--color-hovergreen);
+}
+
+.Garis_Footer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width: 100%;
+  height: 4px;
+  background: var(--color-green);
+}
+
+.Tentang_Saya {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 60px;
+}
+
+.Tentang_Saya h1 {
+  text-align: center;
+  font-size: 90px;
+  color: var(--color-green);
+  text-shadow: 2px 2px 4px black;
+}
+
+footer {
+  background: var(--color-green);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .Content {
+  display: flex;
+  align-items: center;
+}
+
+footer .Content .Toko {
+  color: white;
+  font-weight: bold;
+  margin-left: 310px;
+  font-size: 25px;
+}
+
+footer .Content .Akun {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50px;
+  margin: 0px -1200px;
+  margin-left: 1130px;
 }
